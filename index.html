@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YESERA Beauty Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fffaf7;color:#554956}
+:root{--lilac:#a17b9f;--dark:#634766;--light:#f5edf7}
+header{background:#fffaf7;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #62476615}
+.logo{font:28px 'Playfair Display',serif;letter-spacing:4px;color:var(--dark)}
+.logo small{display:block;text-align:center;font:9px 'DM Sans';letter-spacing:4px}
+nav{display:flex;gap:18px;font-size:13px}
+a{text-decoration:none;color:inherit}
+.btn{display:inline-block;background:var(--lilac);color:white;padding:12px 22px;border:0;border-radius:30px;cursor:pointer;font:inherit;font-size:13px}
+.hero{min-height:440px;padding:60px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#f5edf7 0%,#f5edf7e8 40%,#f5edf744 100%),url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=85') center/cover}
+.hero-content{max-width:490px}
+.eyebrow{letter-spacing:4px;font-size:12px;color:var(--lilac)}
+h1{font:700 clamp(45px,7vw,75px) 'Playfair Display',serif;color:var(--dark);margin:15px 0 5px}
+.script{font:38px 'Parisienne',cursive;color:var(--lilac)}
+.hero p{line-height:1.8;margin:20px 0 25px;font-size:14px}
+section{padding:60px 7%}
+.section-title{text-align:center;margin-bottom:32px}
+.section-title h2{font:35px 'Playfair Display',serif;color:var(--dark)}
+.section-title p{margin-top:8px;color:#88798b;font-size:14px}
+.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.intro-card,.look-card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 22px #62476615;transition:.3s}
+.intro-card:hover,.look-card:hover{transform:translateY(-4px)}
+.intro-card img{width:100%;height:200px;object-fit:cover}
+.intro-info{padding:18px}
+.intro-info h3{font:23px 'Playfair Display',serif;color:var(--dark);margin-bottom:7px}
+.intro-info p{font-size:13px;line-height:1.7}
+.service:nth-of-type(odd){background:#f8f1f8}
+.service-heading{margin-bottom:25px}
+.service-heading h2{font:34px 'Playfair Display',serif;color:var(--dark)}
+.service-heading p{font-size:14px;margin-top:8px;color:#88798b}
+.look-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.look-card img{width:100%;height:230px;object-fit:cover;display:block}
+.look-info{padding:15px}
+.look-info h3{font:18px 'Playfair Display',serif;color:var(--dark);margin-bottom:7px}
+.look-info p{font-size:12px;color:#88798b;min-height:30px;line-height:1.5}
+.price{font-weight:700;color:var(--dark);margin:12px 0;font-size:15px}
+.book{background:linear-gradient(120deg,#f0e4f3,#fff8f5)}
+.booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}
+.booking-grid h2{font:35px 'Playfair Display',serif;color:var(--dark);margin-bottom:12px}
+.booking-grid p{font-size:14px;line-height:1.8}
+form{background:white;padding:25px;border-radius:16px;box-shadow:0 5px 25px #62476612}
+label{display:block;font-size:13px;margin-bottom:7px;font-weight:600}
+input,select,textarea{width:100%;padding:12px;border:1px solid #e2d4e5;border-radius:8px;margin-bottom:17px;font:14px 'DM Sans';background:#fffdfd;color:#554956}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--lilac)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+form .btn{width:100%}
+footer{background:#624766;color:white;padding:35px 7%;text-align:center}
+footer p{font-size:13px;line-height:2}
+footer .logo{color:white;margin-bottom:12px}
+@media(max-width:850px){
+header{padding:13px 5%;flex-wrap:wrap;gap:12px}
+nav{order:3;width:100%;justify-content:center;flex-wrap:wrap;gap:15px}
+header>.btn{padding:10px 13px}
+.hero{padding:55px 7%;background-position:60% center}
+.look-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:550px){
+section{padding:45px 5%}
+.intro-grid{grid-template-columns:1fr}
+.intro-card img{height:230px}
+.look-grid{gap:12px}
+.look-card img{height:190px}
+.look-info{padding:12px}
+.look-info h3{font-size:16px}
+.booking-grid{grid-template-columns:1fr}
+.two{grid-template-columns:1fr;gap:0}
+.section-title h2{font-size:29px}
+.hero{min-height:400px;background-position:58% center}
+.hero-content{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+<a href="#beranda" class="logo">YESERA<small>BEAUTY STUDIO</small></a>
+<nav>
+<a href="#beranda">Beranda</a>
+<a href="#layanan">Layanan</a>
+<a href="#booking">Booking</a>
+<a href="#kontak">Kontak</a>
+</nav>
+<a href="#booking" class="btn">Booking Sekarang</a>
+</header>
+
+<section class="hero" id="beranda">
+<div class="hero-content">
+<div class="eyebrow">PROFESSIONAL MAKEUP ARTIST</div>
+<h1>YESERA</h1>
+<div class="script">Beauty Studio</div>
+<p>Tampil lebih percaya diri di setiap momen spesialmu. Temukan pesona terbaikmu bersama YESERA Beauty Studio.</p>
+<a href="#layanan" class="btn">Jelajahi Layanan →</a>
+</div>
+</section>
+
+<section id="layanan">
+<div class="section-title">
+<h2>Pilih Layanan Makeup</h2>
+<p>Makeup spesial untuk setiap momen berharga.</p>
+</div>
+<div class="intro-grid">
+<a href="#wedding" class="intro-card">
+<img src="https://i.ibb.co.com/1WvwfMK/IMG-1000320905.jpg" alt="Wedding makeup">
+<div class="intro-info"><h3>Wedding Makeup</h3><p>Riasan elegan untuk hari pernikahan impianmu.</p></div>
+</a>
+<a href="#wisuda" class="intro-card">
+<img src="https://i.ibb.co.com/qMmtn3tJ/IMG-1000320912.jpg" alt="Wisuda makeup">
+<div class="intro-info"><h3>Wisuda Makeup</h3><p>Tampil anggun dan percaya diri saat kelulusan.</p></div>
+</a>
+<a href="#natural" class="intro-card">
+<img src="https://i.ibb.co.com/Lz5JrmQp/IMG-1000320913.jpg" alt="Natural makeup">
+<div class="intro-info"><h3>Natural Makeup</h3><p>Look fresh, lembut, dan cantik untuk sehari-hari.</p></div>
+</a>
+</div>
+</section>
+
+<section class="service" id="wedding">
+<div class="service-heading">
+<h2>Wedding Makeup</h2>
+<p>Makeup anggun untuk hari paling istimewa.</p>
+</div>
+<div class="look-grid">
+<div class="look-card"><img src="https://i.ibb.co.com/PZ04Q94p/IMG-1000320882.jpg" alt="Classic bridal"><div class="look-info"><h3>01. Classic Bride</h3><p>Riasan klasik, elegan dan timeless.</p><div class="price">Rp2.500.000</div><button class="btn" onclick="pilih('Wedding','Classic Bride',1500000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/bjb8xvVT/IMG-1000320886.jpg" alt="Soft glam bride"><div class="look-info"><h3>02. Soft Glam</h3><p>Glamor lembut dengan hasil menawan.</p><div class="price">Rp1.750.000</div><button class="btn" onclick="pilih('Wedding','Soft Glam',1750000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/5X6HrXvj/IMG-1000320895.jpg" alt="Royal bride"><div class="look-info"><h3>03. Royal Bride</h3><p>Gaya mewah untuk penampilan istimewa.</p><div class="price">Rp5.000.000</div><button class="btn" onclick="pilih('Wedding','Royal Bride',2000000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/7dvDJCch/IMG-1000320897.jpg" alt="Modern bride"><div class="look-info"><h3>04. Modern Bride</h3><p>Gaya modern, flawless dan fotogenik.</p><div class="price">Rp3.250.000</div><button class="btn" onclick="pilih('Wedding','Modern Bride',2250000)">Pilih Paket</button></div></div>
+</div>
+</section>
+
+<section class="service" id="wisuda">
+<div class="service-heading">
+<h2>Wisuda Makeup</h2>
+<p>Rayakan perjuanganmu dengan tampilan terbaik.</p>
+</div>
+<div class="look-grid">
+<div class="look-card"><img src="https://i.ibb.co.com/dJLKPY5B/IMG-1000320898.jpg" alt="Soft glam wisuda"><div class="look-info"><h3>01. Soft Glam</h3><p>Anggun dengan sentuhan glam lembut.</p><div class="price">Rp350.000</div><button class="btn" onclick="pilih('Wisuda','Soft Glam',350000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/9kXMwBrC/IMG-1000320902.jpg" alt="Natural glow"><div class="look-info"><h3>02. Natural Glow</h3><p>Fresh dan bercahaya di hari kelulusan.</p><div class="price">Rp400.000</div><button class="btn" onclick="pilih('Wisuda','Natural Glow',400000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/ynrzRxZD/IMG-1000320903.jpg" alt="Elegant pink"><div class="look-info"><h3>03. Elegant Pink</h3><p>Sentuhan pink yang manis dan elegan.</p><div class="price">Rp450.000</div><button class="btn" onclick="pilih('Wisuda','Elegant Pink',450000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/JWXjtq6C/IMG-1000320904.jpg" alt="Full glam"><div class="look-info"><h3>04. Full Glam</h3><p>Makeup tegas untuk hasil foto memukau.</p><div class="price">Rp500.000</div><button class="btn" onclick="pilih('Wisuda','Full Glam',500000)">Pilih Paket</button></div></div>
+</div>
+</section>
+
+<section class="service" id="natural">
+<div class="service-heading">
+<h2>Natural Makeup</h2>
+<p>Simple, fresh, dan tetap menawan.</p>
+</div>
+<div class="look-grid">
+<div class="look-card"><img src="https://i.ibb.co.com/PGvWB6Pk/IMG-1000320850.jpg" alt="Fresh clean"><div class="look-info"><h3>01. Fresh & Clean</h3><p>Riasan tipis dengan hasil segar.</p><div class="price">Rp200.000</div><button class="btn" onclick="pilih('Natural','Fresh & Clean',200000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/wFkyy7hh/IMG-1000320862.jpg" alt="Soft brown"><div class="look-info"><h3>02. Soft Brown</h3><p>Nuansa cokelat yang hangat dan lembut.</p><div class="price">Rp250.000</div><button class="btn" onclick="pilih('Natural','Soft Brown',250000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/wN23sWmg/IMG-1000320863.jpg" alt="Peachy glow"><div class="look-info"><h3>03. Peachy Glow</h3><p>Warna peach yang manis dan bercahaya.</p><div class="price">Rp275.000</div><button class="btn" onclick="pilih('Natural','Peachy Glow',275000)">Pilih Paket</button></div></div>
+<div class="look-card"><img src="https://i.ibb.co.com/nN6zt0Zf/IMG-1000320869.jpg" alt="Minimal look"><div class="look-info"><h3>04. Minimal Look</h3><p>Tampilan minimalis untuk berbagai acara.</p><div class="price">Rp300.000</div><button class="btn" onclick="pilih('Natural','Minimal Look',300000)">Pilih Paket</button></div></div>
+</div>
+</section>
+
+<section class="book" id="booking">
+<div class="booking-grid">
+<div>
+<div class="script">Your special day</div>
+<h2>Booking Sekarang</h2>
+<p>Pilih paket makeup favoritmu, isi data booking, dan kirim permintaan melalui WhatsApp untuk konfirmasi jadwal bersama YESERA Beauty Studio.</p>
+</div>
+<form id="bookingForm">
+<div class="two">
+<div><label>Nama Lengkap</label><input id="nama" required placeholder="Nama kamu"></div>
+<div><label>Nomor WhatsApp</label><input id="wa" required type="tel" placeholder="08xxxxxxxxxx"></div>
+</div>
+<label>Jenis Makeup</label>
+<select id="jenis" required onchange="updatePaket()">
+<option value="">Pilih layanan</option>
+<option>Wedding</option><option>Wisuda</option><option>Natural</option>
+</select>
+<label>Pilih Paket</label>
+<select id="paket" required onchange="updateHarga()">
+<option value="">Pilih jenis makeup dahulu</option>
+</select>
+<label>Harga Paket</label>
+<input id="harga" readonly placeholder="Harga otomatis tampil">
+<div class="two">
+<div><label>Tanggal Acara</label><input id="tanggal" type="date" required></div>
+<div><label>Jam Makeup</label><input id="jam" type="time" required></div>
+</div>
+<label>Alamat / Lokasi Makeup</label>
+<textarea id="alamat" rows="3" required placeholder="Tulis lokasi acara atau makeup"></textarea>
+<label>Catatan Tambahan</label>
+<textarea id="catatan" rows="2" placeholder="Contoh: makeup hijab, request warna, dll."></textarea>
+<button class="btn" type="submit">Kirim Booking via WhatsApp ↗</button>
+</form>
+</div>
+</section>
+
+<footer id="kontak">
+<div class="logo">YESERA<small>BEAUTY STUDIO</small></div>
+<p>More Than Just Makeup ✨</p>
+<p>Wedding • Wisuda • Natural</p>
+<p>Instagram: @yeserabeautystudio</p>
+<p>© 2026 YESERA Beauty Studio. All rights reserved.</p>
+</footer>
+
+<script>
+const data = {
+ Wedding: [
+  ['Classic Bride',2500000],
+  ['Soft Glam',1750000],
+  ['Royal Bride',5000000],
+  ['Modern Bride',3250000]
+ ],
+ Wisuda: [
+  ['Soft Glam',350000],
+  ['Natural Glow',400000],
+  ['Elegant Pink',450000],
+  ['Full Glam',500000]
+ ],
+ Natural: [
+  ['Fresh & Clean',200000],
+  ['Soft Brown',250000],
+  ['Peachy Glow',275000],
+  ['Minimal Look',300000]
+ ]
+};
+
+function rupiah(n) {
+ return 'Rp' + n.toLocaleString('id-ID');
+}
+
+function pilih(jenis,nama,harga) {
+ document.getElementById('jenis').value = jenis;
+ updatePaket();
+ document.getElementById('paket').value = nama;
+ document.getElementById('harga').value = rupiah(harga);
+ document.getElementById('booking').scrollIntoView({behavior:'smooth'});
+}
+
+function updatePaket() {
+ const jenis = document.getElementById('jenis').value;
+ const paket = document.getElementById('paket');
+ paket.innerHTML = '<option value="">Pilih paket makeup</option>';
+ (data[jenis] || []).forEach(item => {
+  const option = document.createElement('option');
+  option.value = item[0];
+  option.textContent = item[0] + ' — ' + rupiah(item[1]);
+  paket.appendChild(option);
+ });
+ document.getElementById('harga').value = '';
+}
+
+function updateHarga() {
+ const jenis = document.getElementById('jenis').value;
+ const nama = document.getElementById('paket').value;
+ const item = (data[jenis] || []).find(x => x[0] === nama);
+ document.getElementById('harga').value = item ? rupiah(item[1]) : '';
+}
+
+document.getElementById('tanggal').min =
+ new Date().toLocaleDateString('en-CA');
+
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+ e.preventDefault();
+
+ const admin = '089602798627'; // GANTI dengan nomor WhatsApp MUA kamu
+ const nama = document.getElementById('nama').value.trim();
+ const wa = document.getElementById('wa').value.trim();
+ const jenis = document.getElementById('jenis').value;
+ const paket = document.getElementById('paket').value;
+ const harga = document.getElementById('harga').value;
+ const tanggal = document.getElementById('tanggal').value;
+ const jam = document.getElementById('jam').value;
+ const alamat = document.getElementById('alamat').value.trim();
+ const catatan = document.getElementById('catatan').value.trim();
+
+ const pesan =
+  'Halo YESERA Beauty Studio! Saya ingin booking makeup.%0A%0A' +
+  '*DATA BOOKING*%0A' +
+  'Nama: ' + encodeURIComponent(nama) + '%0A' +
+  'WhatsApp: ' + encodeURIComponent(wa) + '%0A' +
+  'Layanan: ' + encodeURIComponent(jenis) + '%0A' +
+  'Paket: ' + encodeURIComponent(paket) + '%0A' +
+  'Harga: ' + encodeURIComponent(harga) + '%0A' +
+  'Tanggal: ' + encodeURIComponent(tanggal) + '%0A' +
+  'Jam: ' + encodeURIComponent(jam) + '%0A' +
+  'Lokasi: ' + encodeURIComponent(alamat) + '%0A' +
+  'Catatan: ' + encodeURIComponent(catatan || '-');
+
+ window.open('https://wa.me/' + admin + '?text=' + pesan, '_blank');
+});
+</script>
+</body>
+  </html>
