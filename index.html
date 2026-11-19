@@ -203,8 +203,7 @@ section{padding:45px 5%}
 <p>Wedding • Wisuda • Natural</p>
 <p>Instagram: @yeserabeautystudio</p>
 <p>© 2026 YESERA Beauty Studio. All rights reserved.</p>
-</footer>
-
+ </footer>
 <script>
 const data = {
  Wedding: [
@@ -235,7 +234,7 @@ function pilih(jenis,nama,harga) {
  document.getElementById('jenis').value = jenis;
  updatePaket();
  document.getElementById('paket').value = nama;
- document.getElementById('harga').value = rupiah(harga);
+ updateHarga();
  document.getElementById('booking').scrollIntoView({behavior:'smooth'});
 }
 
@@ -265,7 +264,7 @@ document.getElementById('tanggal').min =
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
  e.preventDefault();
 
- const admin = '089602798627'; // GANTI dengan nomor WhatsApp MUA kamu
+ const admin = '6289602798627';
  const nama = document.getElementById('nama').value.trim();
  const wa = document.getElementById('wa').value.trim();
  const jenis = document.getElementById('jenis').value;
@@ -277,20 +276,23 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
  const catatan = document.getElementById('catatan').value.trim();
 
  const pesan =
-  'Halo YESERA Beauty Studio! Saya ingin booking makeup.%0A%0A' +
-  '*DATA BOOKING*%0A' +
-  'Nama: ' + encodeURIComponent(nama) + '%0A' +
-  'WhatsApp: ' + encodeURIComponent(wa) + '%0A' +
-  'Layanan: ' + encodeURIComponent(jenis) + '%0A' +
-  'Paket: ' + encodeURIComponent(paket) + '%0A' +
-  'Harga: ' + encodeURIComponent(harga) + '%0A' +
-  'Tanggal: ' + encodeURIComponent(tanggal) + '%0A' +
-  'Jam: ' + encodeURIComponent(jam) + '%0A' +
-  'Lokasi: ' + encodeURIComponent(alamat) + '%0A' +
-  'Catatan: ' + encodeURIComponent(catatan || '-');
+  'Halo YESERA Beauty Studio! Saya ingin booking makeup.\n\n' +
+  'DATA BOOKING\n' +
+  'Nama: ' + nama + '\n' +
+  'WhatsApp: ' + wa + '\n' +
+  'Layanan: ' + jenis + '\n' +
+  'Paket: ' + paket + '\n' +
+  'Harga: ' + harga + '\n' +
+  'Tanggal: ' + tanggal + '\n' +
+  'Jam: ' + jam + '\n' +
+  'Lokasi: ' + alamat + '\n' +
+  'Catatan: ' + (catatan || '-');
 
- window.open('https://wa.me/' + admin + '?text=' + pesan, '_blank');
+ const link = 'https://api.whatsapp.com/send?phone=' +
+  admin + '&text=' + encodeURIComponent(pesan);
+
+ window.location.href = link;
 });
 </script>
 </body>
-  </html>
+</html>
