@@ -125,7 +125,71 @@ form {
   font-size: 35px !important;
   font-style: normal !important;
 }
-</style>
+  header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 5%;
+  gap: 20px;
+}
+
+header .logo {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 38px;
+  letter-spacing: 5px;
+  color: #624766;
+  text-decoration: none;
+}
+
+header .logo small {
+  display: block;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+header nav {
+  order: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+header nav a {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 17px;
+  color: #554956;
+  text-decoration: none;
+}
+
+header .btn {
+  border-radius: 30px;
+  padding: 14px 25px;
+  background: #a47da8;
+  color: white;
+  text-decoration: none;
+}
+
+@media(max-width:550px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  header .logo {
+    font-size: 29px;
+  }
+
+  header nav {
+    gap: 18px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+  </style>
 </head>
 <body>
 
