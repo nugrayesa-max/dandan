@@ -7,16 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:#fffaf7;color:#554956}
-:root{--lilac:#a17b9f;--dark:#634766;--light:#f5edf7}
-header{background:#fffaf7;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #62476615}
-.logo{font:28px 'Playfair Display',serif;letter-spacing:4px;color:var(--dark)}
-.logo small{display:block;text-align:center;font:9px 'DM Sans';letter-spacing:4px}
-nav{display:flex;gap:18px;font-size:13px}
-a{text-decoration:none;color:inherit}
-.btn{display:inline-block;background:var(--lilac);color:white;padding:12px 22px;border:0;border-radius:30px;cursor:pointer;font:inherit;font-size:13px}
-.hero{min-height:440px;padding:60px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#f5edf7 0%,#f5edf7e8 40%,#f5edf744 100%),url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=85') center/cover}
-.hero-content{max-width:490px}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background:
+    linear-gradient(rgba(255,250,247,.55), rgba(255,250,247,.55)),
+    url('background-yesera.jpg') center/cover fixed no-repeat;
+  color: #554956;
+}
 .eyebrow{letter-spacing:4px;font-size:12px;color:var(--lilac)}
 h1{font:700 clamp(45px,7vw,75px) 'Playfair Display',serif;color:var(--dark);margin:15px 0 5px}
 .script{font:38px 'Parisienne',cursive;color:var(--lilac)}
@@ -73,8 +70,35 @@ section{padding:45px 5%}
 .booking-grid{grid-template-columns:1fr}
 .two{grid-template-columns:1fr;gap:0}
 .section-title h2{font-size:29px}
-.hero{min-height:400px;background-position:58% center}
-.hero-content{max-width:100%}
+..hero {
+  min-height: 440px;
+  padding: 60px 8%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245,237,247,.78),
+      rgba(245,237,247,.35)
+    ),
+    url('background-yesera.jpg') center/cover;
+header {
+  background: rgba(255,250,247,.88);
+  backdrop-filter: blur(10px);
+}
+
+.service {
+  background: rgba(248,241,248,.78);
+}
+
+.book {
+  background: rgba(240,228,243,.88);
+}
+
+.intro-card,
+.look-card,
+form {
+  background: rgba(255,255,255,.94);
 }
 </style>
 </head>
